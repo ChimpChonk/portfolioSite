@@ -1,0 +1,51 @@
+.logo-content {
+    font-family: "Cario";
+}
+
+.logo-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.logo-text {
+    font-size: 3rem; /* Decreased font size for mobile */
+    transition: color 0.5s ease;
+}
+
+.logo-text:hover {
+    color: #FFC107;
+}
+
+@keyframes color-change {
+    0% {
+        color: #FFC107;
+    }
+    50% {
+        color: #007BFF;
+    }
+    100% {
+        color: #DC3545;
+    }
+}
+
+.logo-content {
+    animation: color-change 10s infinite alternate;
+}
+
+.nav-menu {
+    display: none;
+}
+
+/* Mobile-first approach */
+@media (min-width: 768px) {
+    /* Styles for tablets and desktops */
+    .logo-text {
+        font-size: 5rem; /* Reset font size for larger screens */
+    }
+
+    .nav-menu
+    {
+        display: block;
+    }
+}
