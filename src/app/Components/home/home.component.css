@@ -1,5 +1,5 @@
 .logo-content {
-    font-family: "Cario";
+    font-family: "Roboto", sans-serif;
 }
 
 .logo-btn {
@@ -10,42 +10,191 @@
 
 .logo-text {
     font-size: 3rem; /* Decreased font size for mobile */
-    transition: color 0.5s ease;
+    color: #FFC107; /* Set text color */
+    text-shadow: 0 0 10px rgba(255, 193, 7, 0.8); /* Initial shadow with glow */
+    transition: text-shadow 0.5s ease; /* Transition for smoother effect */
 }
 
 .logo-text:hover {
-    color: #FFC107;
+    text-shadow: 0 0 20px rgba(255, 193, 7, 0.9); /* Increase shadow size on hover for emphasis */
 }
 
-@keyframes color-change {
+@keyframes glow-in-out {
     0% {
-        color: #FFC107;
+        text-shadow: 0 0 10px rgba(255, 193, 7, 0.8); /* Initial shadow with glow */
     }
     50% {
-        color: #007BFF;
+        text-shadow: 0 0 20px rgba(255, 193, 7, 0.9); /* Increased glow */
     }
     100% {
-        color: #DC3545;
+        text-shadow: 0 0 10px rgba(255, 193, 7, 0.8); /* Back to initial shadow */
     }
 }
 
-.logo-content {
-    animation: color-change 10s infinite alternate;
+.logo-text {
+    animation: glow-in-out 2s infinite alternate; /* Apply animation to text shadow */
 }
+
 
 .nav-menu {
     display: none;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.home-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    padding: 1rem
+}
+
+.intro-text {
+    font-size: 2rem;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    margin: 0.2rem 0;
+}
+
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    
+    50% {
+        width: 100%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes erasing {
+    0% {
+        width: 100%;
+    }
+    50% {
+        width: 100%;
+    }
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes blink-caret {
+    0%, 100% {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #FFC107; /* Blinking cursor color */
+    }
+}
+
+.intro-dev {
+    font-size: 1.3rem;
+    color: #FFC107; /* Set the desired text color */
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    margin: 0.2rem 0;
+    overflow: hidden;
+    border-right: .15em solid #FFC107; /* Border for terminal effect */
+    white-space: nowrap;
+    animation: typing 5s steps(40, end) infinite alternate 5s, blink-caret 1.5s infinite 5s; /* Apply animation to the text */
+}
+
+
+/* .intro-dev {
+    font-size: 1.3rem;
+    color: #FFC107; 
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    margin: 0.2rem 0;
+    overflow: hidden;
+    border-right: .15em solid #FFC107; 
+    white-space: nowrap;
+    animation: typing 3.5s steps(40, end), blink-caret 1.5s infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    0%, 100% {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #FFC107;
+    }
+} */
+
+
+
+.intro-text-small {
+    font-size: 1rem;
+    color: #696969;
+    font-family: "Roboto", sans-serif;
+    text-decoration: underline;
+    margin: 0.2rem 0;
+}
+
+.contact-btn {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    padding: 1rem 3rem;
+    border-radius: 2rem;
+    border: 2px solid #FFC107;
+    background-color: transparent;
+    font-family: "Roboto", sans-serif;
+    color: #FFC107;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease; /* Apply transition for the box-shadow */
+}
+
+.contact-btn:hover {
+    box-shadow: 0 0 20px 5px rgba(255, 193, 7, 0.7); /* Add a glowing shadow on hover */
+}
+
+/* Optional: Add a slight shadow when not hovered */
+.contact-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 2rem;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Slight shadow */
 }
 
 /* Mobile-first approach */
 @media (min-width: 768px) {
     /* Styles for tablets and desktops */
     .logo-text {
-        font-size: 5rem; /* Reset font size for larger screens */
+        font-size: 3rem; /* Reset font size for larger screens */
     }
 
     .nav-menu
     {
         display: block;
+    }
+
+    .contact-btn {
+        margin: 1rem 0;
     }
 }

@@ -18,5 +18,4 @@ import { CvComponent } from '../cv/cv.component';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-
 }
