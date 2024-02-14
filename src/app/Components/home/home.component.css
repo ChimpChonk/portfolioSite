@@ -1,11 +1,14 @@
-.logo-content {
+* {
     font-family: "Roboto", sans-serif;
+
 }
+
+/* ------ LOGO STYLES START SMALL SCREEN ----------*/
 
 .logo-btn {
     border: none;
     background: none;
-    cursor: pointer;
+    cursor: pointer;    
 }
 
 .logo-text {
@@ -35,6 +38,8 @@
     animation: glow-in-out 2s infinite alternate; /* Apply animation to text shadow */
 }
 
+/* ------ LOGO STYLES END SMALL SCREEN ----------*/
+
 
 .nav-menu {
     display: none;
@@ -42,7 +47,7 @@
 
 .nav-bar {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     padding: 1rem;
 }
@@ -52,18 +57,17 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 90vh;
-    padding: 1rem
+    height: 100vh;
 }
 
 .intro-text {
     font-size: 2rem;
     color: #fff;
-    font-family: "Roboto", sans-serif;
     margin: 0.2rem 0;
+    align-items: center;
 }
 
-
+/* Terminal effect */
 @keyframes typing {
     0% {
         width: 0;
@@ -101,52 +105,19 @@
 .intro-dev {
     font-size: 1.3rem;
     color: #FFC107; /* Set the desired text color */
-    font-family: "Roboto", sans-serif;
     text-transform: uppercase;
     margin: 0.2rem 0;
     overflow: hidden;
     border-right: .15em solid #FFC107; /* Border for terminal effect */
     white-space: nowrap;
-    animation: typing 5s steps(40, end) infinite alternate 5s, blink-caret 1.5s infinite 5s; /* Apply animation to the text */
+    animation: typing 5s steps(40, end) infinite alternate, blink-caret 0.5s step-end infinite;
 }
 
-
-/* .intro-dev {
-    font-size: 1.3rem;
-    color: #FFC107; 
-    font-family: "Roboto", sans-serif;
-    text-transform: uppercase;
-    margin: 0.2rem 0;
-    overflow: hidden;
-    border-right: .15em solid #FFC107; 
-    white-space: nowrap;
-    animation: typing 3.5s steps(40, end), blink-caret 1.5s infinite;
-}
-
-@keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%;
-    }
-}
-
-@keyframes blink-caret {
-    0%, 100% {
-        border-color: transparent;
-    }
-    50% {
-        border-color: #FFC107;
-    }
-} */
-
-
+/*---------- terminal effect end --------------*/
 
 .intro-text-small {
     font-size: 1rem;
-    color: #696969;
-    font-family: "Roboto", sans-serif;
+    color: #9893D8;
     text-decoration: underline;
     margin: 0.2rem 0;
 }
@@ -158,16 +129,17 @@
     border-radius: 2rem;
     border: 2px solid #FFC107;
     background-color: transparent;
-    font-family: "Roboto", sans-serif;
     color: #FFC107;
     cursor: pointer;
     position: relative;
     overflow: hidden;
-    transition: box-shadow 0.3s ease; /* Apply transition for the box-shadow */
+    transition: box-shadow ease; /* Apply transition for the box-shadow */
 }
 
 .contact-btn:hover {
-    box-shadow: 0 0 20px 5px rgba(255, 193, 7, 0.7); /* Add a glowing shadow on hover */
+    box-shadow: 0 0 20px 5px rgba(255, 193, 7, 0.7);
+    color: #222;
+    background: #FFC107; /* Add a glowing shadow on hover */
 }
 
 /* Optional: Add a slight shadow when not hovered */
@@ -182,19 +154,53 @@
     box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Slight shadow */
 }
 
-/* Mobile-first approach */
-@media (min-width: 768px) {
-    /* Styles for tablets and desktops */
+/* Bigger Screen */
+@media (min-width: 800px) {
     .logo-text {
-        font-size: 3rem; /* Reset font size for larger screens */
+        font-size: 3rem;
+        margin: 0 3rem;
+    }
+
+    .nav-bar {
+        flex-direction: row;
+        justify-content: space-between;
     }
 
     .nav-menu
     {
-        display: block;
+        display: flex;
+        justify-content: s;
+        margin: 0 3rem;
+        font-size: 1.5rem;
+        align-items: space-between;
+        padding: 0 3rem;
+        font-weight: bold;
+    }
+
+    .nav-menu a {
+        margin: 0 2rem;
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .nav-menu a:hover {
+        color: #FFC107;
     }
 
     .contact-btn {
-        margin: 1rem 0;
+        width: 15rem;
     }
+
+    .intro-text {
+        font-size: 3rem;
+    }
+
+    .intro-dev {
+        font-size: 2rem;
+    }
+
+    .intro-text-small {
+        font-size: 1.5rem;
+    }
+
 }

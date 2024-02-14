@@ -1,0 +1,131 @@
+/* Mobile Screen */
+* {
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.wrap-this {
+    text-align: center;
+}
+
+.title h1 {
+    margin: 1.5rem;
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+.image {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.image img {
+    width: auto;
+    height: 100%;
+    filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.5));
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+}
+
+.about-text {
+    text-align: left;
+    font-size: 1rem;
+}
+
+.tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+li {
+    width: 30%;
+    justify-content: center;
+    padding: 1rem;
+    box-sizing: border-box;
+    list-style-type: circle;
+    list-style-position: inside;
+    color: #9893D8;
+    font-size: 1rem;
+}
+
+@media (min-width: 1000px) {
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center items horizontally */
+        justify-content: center; /* Center items vertically */
+        height: 100vh;
+    }
+
+    .wrap-this {
+        max-width: 1000px; /* Set maximum width */
+        margin: 0 auto; /* Center the container horizontally */
+        padding: 0 2rem; /* Add padding on the left and right */
+        text-align: center;
+    }
+
+    .mid-wrap {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        gap: 1rem;
+        align-content: center;
+    }
+
+    .title h1 {
+        font-size: 3rem;
+        margin-bottom: 5rem;
+    }
+
+    .about-content {
+        padding: 1rem;
+    }
+
+    .about-text {
+        text-align: left;
+        padding: 0 2rem;
+    }
+
+    .image {
+        height: 15rem;
+        width: auto;
+    }
+
+    .about-content {
+        font-size: 1.3rem;
+
+    }
+
+    .tech-list {
+        padding: 2rem 0;
+    }
+
+    li {
+        width: 20%;
+        padding: 1rem;
+        font-size: 1rem;
+        
+    }
+}
