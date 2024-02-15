@@ -6,9 +6,7 @@
 /* ------ LOGO STYLES START SMALL SCREEN ----------*/
 
 .logo-btn {
-    border: none;
-    background: none;
-    cursor: pointer;    
+    text-decoration: none; 
 }
 
 .logo-text {
@@ -35,7 +33,8 @@
 }
 
 .logo-text {
-    animation: glow-in-out 2s infinite alternate; /* Apply animation to text shadow */
+    animation: glow-in-out 2s infinite alternate;
+    animation-delay: 2s;
 }
 
 /* ------ LOGO STYLES END SMALL SCREEN ----------*/

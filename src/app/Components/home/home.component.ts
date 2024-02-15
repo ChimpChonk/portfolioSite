@@ -4,6 +4,8 @@ import { ContactComponent } from '../contact/contact.component';
 import { FooterComponent } from '../footer/footer.component';
 import { PortfolioComponent } from '../portfolio/portfolio.component';
 import { CvComponent } from '../cv/cv.component';
+import AOS from 'aos';
+
 
 
 @Component({
@@ -18,4 +20,7 @@ import { CvComponent } from '../cv/cv.component';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+    ngOnInit() {
+      AOS.init();
+    }
 }

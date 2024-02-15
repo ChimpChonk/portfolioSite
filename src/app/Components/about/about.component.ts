@@ -1,11 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, ElementRef } from '@angular/core';
+import AOS from 'aos';
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [],
+  imports: [
+  ],
   templateUrl: './about.component.html',
-  styleUrl: './about.component.css'
+  styleUrl: './about.component.css',
 })
 export class AboutComponent {
+
+  ngOnInit() {
+    AOS.init();
+  }
 }
