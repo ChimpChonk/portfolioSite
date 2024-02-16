@@ -1,3 +1,43 @@
 * {
     color: #fff;
 }
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+}
+
+.content {
+    text-align: center;
+}
+
+.title h1 {
+    margin: 1.5rem;
+    color: #fff;
+    font-size: 2.5rem;
+    padding: 1rem;
+}
+
+.portfolio-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+}
+
+.portfolio-images {
+    height: auto;
+    width: 100vw;
+
+}
+
+.portfolio-images img {
+    height: auto;
+    width: 100vw;
+
+}
