@@ -1,22 +1,26 @@
+User
 <div class="wrapper" id="portfolio">
     <div class="content">
-        <div class="title" >
+        <div class="title">
             <h1>Portfolio</h1>
         </div>
         <div class="portfolio-content">
             <div class="portfolio-item-1">
-                <div class="project-images">
-                    <img src="assets/mealPlanner/mealplanner_1.PNG" alt="">
-                    <img src="assets/mealPlanner/mealplanner_2.PNG" alt="">
-                    <img src="assets/mealPlanner/mealplanner_3.PNG" alt="">
-                    <img src="assets/mealPlanner/mealplanner_4.PNG" alt="">
-                    <img src="assets/mealPlanner/mealplanner_5.PNG" alt="">
-                    <img src="assets/mealPlanner/mealplanner_6.PNG" alt="">
-                    <img src="assets/mealPlanner/mealplanner_7.PNG" alt="">
-                    <img src="assets/mealPlanner/mealplanner_8.PNG" alt="">
+                <h2>Mealplanner</h2>
+                <div class="image-effect" data-aos="fade-in">
+                    <div class="project-images">
+                        <img *ngFor="let image of images; let i = index" [src]="image" [class.active]="i === activeIndex">
+                    </div>
+                    <div class="indicators">
+                        <span *ngFor="let image of images; let i = index" [class.active]="i === activeIndex" (click)="setActiveSlide(i)"></span>
+                    </div>
+                    <div class="controls">
+                        <button (click)="prevSlide()" class="prev">&#10094;</button>
+                        <button (click)="nextSlide()" class="next">&#10095;</button>
+                    </div>                    
                 </div>
                 <div class="portfolio-text">
-                    <h2>Mealplanner</h2>
+                    
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi veniam velit, sit ipsam illo aliquam. Magni, molestiae sunt adipisci aliquid doloremque ab quas eveniet soluta odio voluptates mollitia hic expedita.</p>
                 </div>
             </div>

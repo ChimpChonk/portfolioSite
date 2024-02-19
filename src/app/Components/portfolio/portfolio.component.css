@@ -30,14 +30,94 @@
     padding: 0.5rem;
 }
 
-.portfolio-images {
-    height: auto;
-    width: 100vw;
-
+.project-images {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
 }
 
-.portfolio-images img {
+.project-images img {
+    max-width: 60vw;
     height: auto;
-    width: 100vw;
+    display: none;
+    opacity: 0;
+    border-radius: 2rem;
+    filter: drop-shadow(0px 0px 25px rgba(0, 0, 0, 0.8));
+}
 
+@keyframes zoom-in {
+    0% {
+        transform: scale(0);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.project-images img.active {
+    display: block;
+    animation: zoom-in 1s ease forwards;
+}
+
+
+.indicators {
+    text-align: center;
+}
+
+.indicators span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.indicators span.active {
+    background-color: #FFC107;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px; /* Adjust margin as needed */
+}
+
+.controls button {
+    background-color: #9893d867;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 1rem;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    margin: 0 5px;
+    border-radius: 5px;
+    width: 4rem;
+}
+
+.controls button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.image-effect {
+    display: none;
+}
+
+.portfolio-text {
+    text-align: left;
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+@media (min-width: 800px) {
+    .image-effect {
+        display: block;
+    }
 }
