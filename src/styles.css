@@ -1,5 +1,8 @@
+body {
+    background-color: #0a0b5b;
+}
+
 * {
     margin: 0;
     padding: 0;
-    background-color: #0a0b5b;
 }

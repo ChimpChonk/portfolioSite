@@ -1,43 +1,84 @@
-User
 <div class="wrapper" id="portfolio">
     <div class="content">
         <div class="title">
             <h1>Portfolio</h1>
         </div>
         <div class="portfolio-content">
-            <div class="portfolio-item-1">
-                <h2>Mealplanner</h2>
-                <div class="image-effect" data-aos="fade-in">
-                    <div class="project-images">
-                        <img *ngFor="let image of images; let i = index" [src]="image" [class.active]="i === activeIndex">
-                    </div>
-                    <div class="indicators">
-                        <span *ngFor="let image of images; let i = index" [class.active]="i === activeIndex" (click)="setActiveSlide(i)"></span>
-                    </div>
-                    <div class="controls">
-                        <button (click)="prevSlide()" class="prev">&#10094;</button>
-                        <button (click)="nextSlide()" class="next">&#10095;</button>
-                    </div>                    
-                </div>
-                <div class="portfolio-text">
-                    
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi veniam velit, sit ipsam illo aliquam. Magni, molestiae sunt adipisci aliquid doloremque ab quas eveniet soluta odio voluptates mollitia hic expedita.</p>
+            <div class="card">
+                <img src="assets/mealPlanner/mealplanner_logo.PNG" alt="">
+                <div class="descriptions">
+                    <h1>MealPlanner</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque facilis, quidem autem sint, quos voluptas dolor assumenda impedit delectus animi sapiente voluptate unde laudantium natus nostrum corporis? Animi, laboriosam excepturi!
+                    </p>
+                    <button>
+                        <i class="fab">&#xf092;</i>
+                        Github
+                    </button>
                 </div>
             </div>
-            <div class="portfolio-item">
-                <img src="assets/project_2.png" alt="">
-                <div class="portfolio-text">
-                    <h2>Project 2</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi veniam velit, sit ipsam illo aliquam. Magni, molestiae sunt adipisci aliquid doloremque ab quas eveniet soluta odio voluptates mollitia hic expedita.</p>
+            <div class="card">
+                <img src="assets/mealPlanner/mealplanner_logo.PNG" alt="">
+                <div class="descriptions">
+                    <h1>MealPlanner</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque facilis, quidem autem sint, quos voluptas dolor assumenda impedit delectus animi sapiente voluptate unde laudantium natus nostrum corporis? Animi, laboriosam excepturi!
+                    </p>
+                    <button>
+                        <i class="fab fa-github-square"></i>
+                        Github
+                    </button>
                 </div>
             </div>
-            <div class="portfolio-item">
-                <img src="assets/project_3.png" alt="">
-                <div class="portfolio-text">
-                    <h2>Project 3</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi veniam velit, sit ipsam illo aliquam. Magni, molestiae sunt adipisci aliquid doloremque ab quas eveniet soluta odio voluptates mollitia hic expedita.</p>
+            <div class="card">
+                <img src="assets/mealPlanner/mealplanner_logo.PNG" alt="">
+                <div class="descriptions">
+                    <h1>MealPlanner</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque facilis, quidem autem sint, quos voluptas dolor assumenda impedit delectus animi sapiente voluptate unde laudantium natus nostrum corporis? Animi, laboriosam excepturi!
+                    </p>
+                    <button>
+                        <i class="fab fa-github-square"></i>
+                        Github
+                    </button>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+
+
+<!--BACKUP Old Version-->
+
+<!-- <div class="portfolio-content">
+    <div class="portfolio-item-1">
+        <h2>Mealplanner</h2>
+        <div class="image-effect" data-aos="fade-in">
+            <div class="project-images">
+                <img *ngFor="let image of images; let i = index" [src]="image" [class.active]="i === activeIndex">
+            </div>
+            <div class="indicators">
+                <span *ngFor="let image of images; let i = index" [class.active]="i === activeIndex" (click)="setActiveSlide(i)"></span>
+            </div>
+            <div class="controls">
+                <button (click)="prevSlide()" class="prev">&#10094;</button>
+                <button (click)="nextSlide()" class="next">&#10095;</button>
+            </div>                    
+        </div>
+        <div class="portfolio-text">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi veniam velit, sit ipsam illo aliquam. Magni, molestiae sunt adipisci aliquid doloremque ab quas eveniet soluta odio voluptates mollitia hic expedita.</p>
+        </div>
+    </div>
+    <div class="portfolio-item">
+        <img src="assets/project_2.png" alt="">
+        <div class="portfolio-text">
+            <h2>Project 2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi veniam velit, sit ipsam illo aliquam. Magni, molestiae sunt adipisci aliquid doloremque ab quas eveniet soluta odio voluptates mollitia hic expedita.</p>
+        </div>
+    </div>
+    <div class="portfolio-item">
+        <img src="assets/project_3.png" alt="">
+        <div class="portfolio-text">
+            <h2>Project 3</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi veniam velit, sit ipsam illo aliquam. Magni, molestiae sunt adipisci aliquid doloremque ab quas eveniet soluta odio voluptates mollitia hic expedita.</p>
+        </div>
+    </div>
+</div> -->
