@@ -1,0 +1,93 @@
+.card {
+    width: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(0deg, #0a0b5b, #003a88, #0064a6, #008cb6);
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.7));
+}
+
+.card-img {
+    border-radius: 0.5rem 0.5rem 0 0;
+    width: 95%;
+    margin-top: 0.3rem;
+
+}
+
+.descriptions {
+    margin: 0.3rem 0;
+    text-align: center;
+}
+
+.descriptions p {
+    padding: 0.3rem;
+    font-size: small;
+    
+}
+
+.tag-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center items horizontally */
+}
+
+.tag {
+    padding: 4px 8px;
+    border-radius: 50px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #fff;
+    margin: 0.2rem;
+}
+
+.github-btn {
+    display: flex;
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    padding: 0.2rem 0.3rem;
+    border-radius: 2rem;
+    border: 2px solid #FFC107;
+    background-color: transparent;
+    color: #FFC107;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    transition: box-shadow ease;
+}
+
+.github-btn:hover {
+    box-shadow: 0 0 20px 5px rgba(255, 193, 7, 0.7);
+    color: #222;
+    background: #FFC107;
+     /* Add a glowing shadow on hover */
+}
+
+/* Optional: Add a slight shadow when not hovered */
+.github-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 2rem;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Slight shadow */
+}
+
+.github-btn img{
+    width: 1rem;
+    margin-right: 0.1rem;
+
+}
+
+.github {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
