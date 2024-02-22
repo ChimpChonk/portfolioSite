@@ -1,9 +1,14 @@
-.card {
-    width: 15rem;
+.card-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
     flex-direction: column;
+    height: 100%;
+}
+
+.card {
+    width: 20rem;
+    height: 100%;
     background: linear-gradient(0deg, #0a0b5b, #003a88, #0064a6, #008cb6);
     margin: 0.5rem;
     border-radius: 0.5rem;
@@ -20,11 +25,13 @@
 .descriptions {
     margin: 0.3rem 0;
     text-align: center;
+    flex-grow: 1; /* This makes descriptions take up remaining space */
+    padding: 0.5rem;
 }
 
 .descriptions p {
     padding: 0.3rem;
-    font-size: small;
+    font-size: 1rem;
     
 }
 
@@ -44,7 +51,6 @@
 }
 
 .github-btn {
-    display: flex;
     font-size: 1rem;
     margin: 0.5rem 0;
     padding: 0.2rem 0.3rem;
@@ -55,8 +61,6 @@
     cursor: pointer;
     position: relative;
     overflow: hidden;
-    align-items: center;
-    justify-content: center;
     transition: box-shadow ease;
 }
 
@@ -90,4 +94,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Align button container at the bottom */
+    padding: 0.5rem; /* Adjust padding as needed */
+    position: absolute; /* Position at the bottom of the card */
+    bottom: 0; /* Stick to the bottom */
+    width: 100%; /* Take full width of the card */
 }
