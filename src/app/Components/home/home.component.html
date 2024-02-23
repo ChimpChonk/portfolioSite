@@ -1,36 +1,35 @@
-<div id="home" class="home">
-    <!-- NAV start-->
-    <div class="nav-bar">
-        <div class="logo" data-aos="fade-right" data-aos-duration="2000">
-            <a href="#home" class="logo-btn">
-                <h1 class="logo-text">SP</h1>
-            </a>
+<div class="wrapper">
+    <div id="home" class="home">
+        <!-- NAV start-->
+        <div class="nav-bar">
+            <div class="logo" data-aos="fade-right" data-aos-duration="2000">
+                <a href="#home" class="logo-btn">
+                    <h1 class="logo-text">SP</h1>
+                </a>
+            </div>
+            <div class="nav-menu" data-aos="fade-left" data-aos-duration="2000">
+                <a href="#about">About</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#cv">CV</a>
+                <a href="#contact">Contact</a>
+            </div>
         </div>
-
-        <div class="nav-menu" data-aos="fade-left" data-aos-duration="2000">
-            <a href="#about">About</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#cv">CV</a>
-            <a href="#contact">Contact</a>
+        <!--Nav End-->
+        <div class="home-content" data-aos="flip-right" data-aos-duration="2000">
+            <div class="home-text">
+                <h1 class="intro-text">Hi,</h1>
+                <h1 class="intro-text">I'm <span>Sanjit,</span></h1>
+                <h1 class="intro-dev">Student Software Developer </h1>
+                <p class="intro-text-small">Front End & Back End Developer</p>
+                <a href="mailto:sanjit.poudel28@gmail.com">
+                    <button class="contact-btn">Contact Me</button>
+                </a>
+            </div>
         </div>
     </div>
-
-    <!--Nav End-->
-
-    <div class="home-content" data-aos="flip-right" data-aos-duration="2000">
-        <div class="home-text">
-            <h1 class="intro-text">Hi,</h1>
-            <h1 class="intro-text">I'm <span>Sanjit,</span></h1>
-            <h1 class="intro-dev">Student Software Developer </h1>
-            <p class="intro-text-small">Front End & Back End Developer</p>
-            <a href="mailto:sanjit.poudel28@gmail.com">
-                <button class="contact-btn">Contact Me</button>
-            </a>
-        </div>
-    </div>
+    <app-about id="about"></app-about>
+    <app-portfolio id="portfolio"></app-portfolio>
+    <app-cv id="cv"></app-cv>
+    <app-contact id="app-contact"></app-contact>
+    <app-footer></app-footer>
 </div>
-<app-about id="about"></app-about>
-<app-portfolio id="portfolio"></app-portfolio>
-<app-cv id="cv"></app-cv>
-<app-contact id="app-contact"></app-contact>
-<app-footer></app-footer>
