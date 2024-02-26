@@ -1,8 +1,8 @@
-/* * {
+* {
     color: #fff;
 }
 
-.cv-item {
-    width: 10vw;
+.cv-item img{
+    max-width: 20vw;
     height: auto;
-} */
+}

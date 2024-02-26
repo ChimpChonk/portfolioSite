@@ -1,0 +1,37 @@
+* {
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+}
+
+.contact-btn {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    padding: 1rem 3rem;
+    border-radius: 2rem;
+    max-width: 15rem;
+    border: 2px solid #FFC107;
+    background-color: transparent;
+    color: #FFC107;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow ease;
+}
+
+.contact-btn:hover {
+    box-shadow: 0 0 20px 5px rgba(255, 193, 7, 0.7);
+    color: #222;
+    background: #FFC107;
+}
+
+.contact-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 2rem;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
