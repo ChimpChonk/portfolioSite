@@ -2,7 +2,51 @@
     color: #fff;
 }
 
-.cv-item img{
-    max-width: 20vw;
-    height: auto;
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.content {
+    text-align: center;
+    max-width: 1000px;
+    padding: 0 2rem;
+}
+.title h1 {
+    color: #FFC107;
+    font-size: 3rem;
+    margin: 3rem;
+} 
+
+.cv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.cv-item {
+    justify-self: center;
+    width: auto;
+    height: 800px;
+    filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.5));
+}
+
+.cv-item img {
+    width: auto;
+    height: 100%;
+}
+
+@media (max-width: 700px) {
+    .cv-item {
+        height: 500px;
+    }
+    .title h1 {
+        margin: 1rem;
+        font-size: 2rem;
+    }
 }
