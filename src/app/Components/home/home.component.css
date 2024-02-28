@@ -92,6 +92,8 @@
     font-size: 3rem;
     margin: 0.2rem 0;
     color: #fff;
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
+
 }
 .intro-dev {
     font-size: 2rem;
@@ -102,6 +104,8 @@
     white-space: nowrap;
     overflow: hidden;
     animation: typing 5s steps(40, end) infinite alternate, blink-caret 0.7s step-end infinite;
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
+
 } 
 
 .intro-text-small {
@@ -109,6 +113,8 @@
     margin: 0.2rem 0;
     color: #9893D8;
     text-decoration: underline;
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
+
 }
 
 .contact-btn {
@@ -162,6 +168,7 @@
     font-weight: bold;
     margin: 0 2rem;
     width: 400px;
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
 }
 
 .home-content {

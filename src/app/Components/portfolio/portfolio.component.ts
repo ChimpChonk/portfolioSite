@@ -51,7 +51,7 @@ export class PortfolioComponent{
         { text: 'CSS', color: 'blue' },
         { text: 'TypeScript', color: 'blue' },
       ],
-      title: 'ChimpChonk.com',
+      title: 'sanjit-dev.me',
       description: 'This is my personal website. I built this website using Angular. I have been using this website as a way to showcase my work and to practice my web development skills.',
       link: 'https://github.com/ChimpChonk/portfolioSite'
     },

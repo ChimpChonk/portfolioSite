@@ -30,6 +30,7 @@
     color: #FFC107;
     font-size: 3rem;
     margin-bottom: 5rem;
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
 } 
 
 .image {
