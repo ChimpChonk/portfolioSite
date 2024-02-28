@@ -3,32 +3,39 @@
 
 }
 
-/* ------ LOGO STYLES START SMALL SCREEN ----------*/
+.wrapper {
+    max-width: 1200px;
+    margin-inline: auto;
+}
+
+.logo {
+    margin: 0 2rem;
+}
 
 .logo-btn {
     text-decoration: none; 
 }
 
 .logo-text {
-    font-size: 3rem; /* Decreased font size for mobile */
-    color: #FFC107; /* Set text color */
-    text-shadow: 0 0 10px rgba(255, 193, 7, 0.8); /* Initial shadow with glow */
-    transition: text-shadow 0.5s ease; /* Transition for smoother effect */
+    font-size: 3rem; 
+    color: #FFC107; 
+    text-shadow: 0 0 10px rgba(255, 193, 7, 0.8); 
+    transition: text-shadow 0.5s ease; 
 }
 
 .logo-text:hover {
-    text-shadow: 0 0 20px rgba(255, 193, 7, 0.9); /* Increase shadow size on hover for emphasis */
+    text-shadow: 0 0 20px rgba(255, 193, 7, 0.9);
 }
 
 @keyframes glow-in-out {
     0% {
-        text-shadow: 0 0 10px rgba(255, 193, 7, 0.8); /* Initial shadow with glow */
+        text-shadow: 0 0 10px rgba(255, 193, 7, 0.8); 
     }
     50% {
-        text-shadow: 0 0 20px rgba(255, 193, 7, 0.9); /* Increased glow */
+        text-shadow: 0 0 20px rgba(255, 193, 7, 0.9); 
     }
     100% {
-        text-shadow: 0 0 10px rgba(255, 193, 7, 0.8); /* Back to initial shadow */
+        text-shadow: 0 0 10px rgba(255, 193, 7, 0.8); 
     }
 }
 
@@ -37,36 +44,16 @@
     animation-delay: 2s;
 }
 
-/* ------ LOGO STYLES END SMALL SCREEN ----------*/
-
-
-.nav-menu {
-    display: none;
-}
-
-.nav-bar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-}
-
-.home-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.intro-text {
-    font-size: 2rem;
+.nav-menu a{
+    text-decoration: none;
     color: #fff;
-    margin: 0.2rem 0;
-    align-items: center;
 }
 
-/* Terminal effect */
+.nav-menu a:hover {
+    color: #FFC107;
+}
+
+
 @keyframes typing {
     0% {
         width: 0;
@@ -97,28 +84,37 @@
         border-color: transparent;
     }
     50% {
-        border-color: #FFC107; /* Blinking cursor color */
+        border-color: #FFC107; 
     }
 }
 
-.intro-dev {
-    font-size: 1.3rem;
-    color: #FFC107; /* Set the desired text color */
-    text-transform: uppercase;
+.intro-text {
+    font-size: 3rem;
     margin: 0.2rem 0;
-    overflow: hidden;
-    border-right: .15em solid #FFC107; /* Border for terminal effect */
-    white-space: nowrap;
-    animation: typing 5s steps(40, end) infinite alternate, blink-caret 0.5s step-end infinite;
-}
+    color: #fff;
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
 
-/*---------- terminal effect end --------------*/
+}
+.intro-dev {
+    font-size: 2rem;
+    margin: 0.2rem 0;
+    color: #FFC107;
+    text-transform: uppercase;
+    border-right: .15em solid #FFC107; 
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 5s steps(40, end) infinite alternate, blink-caret 0.7s step-end infinite;
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
+
+} 
 
 .intro-text-small {
-    font-size: 1rem;
+    font-size: 1.5rem;
+    margin: 0.2rem 0;
     color: #9893D8;
     text-decoration: underline;
-    margin: 0.2rem 0;
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
+
 }
 
 .contact-btn {
@@ -126,35 +122,155 @@
     margin: 0.5rem 0;
     padding: 1rem 3rem;
     border-radius: 2rem;
+    width: 15rem;
     border: 2px solid #FFC107;
     background-color: transparent;
     color: #FFC107;
     cursor: pointer;
     position: relative;
     overflow: hidden;
-    transition: box-shadow ease; /* Apply transition for the box-shadow */
+    transition: box-shadow ease;
 }
 
 .contact-btn:hover {
     box-shadow: 0 0 20px 5px rgba(255, 193, 7, 0.7);
     color: #222;
-    background: #FFC107; /* Add a glowing shadow on hover */
+    background: #FFC107;
 }
 
-/* Optional: Add a slight shadow when not hovered */
 .contact-btn::after {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     border-radius: 2rem;
-    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Slight shadow */
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
 
+.home {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 5rem;
+    width: 100%;
+    align-items: center;
+
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 2rem;
+    width: 400px;
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
+}
+
+.home-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.home-text {
+    align-self: center;
+}
+
+
+@media(max-width: 800px) {
+    .nav-menu {
+        display: none;
+    }
+
+    .nav-bar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 1rem;
+        margin: 0;
+    }
+
+    .home-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .intro-text {
+        font-size: 2rem;
+    }
+    .intro-dev {
+        font-size: 1.3rem;
+    }
+    .intro-text-small {
+        font-size: 1rem;
+    }
+
+    .contact-btn {
+        padding: 1rem 2rem;
+        width: 10rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------ LOGO STYLES START SMALL SCREEN ----------*/
+/* 
+
+/* ------ LOGO STYLES END SMALL SCREEN ----------*/
+
+
+/* .nav-menu {
+    display: none;
+}
+
+.nav-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+.home-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+
+
+/*---------- terminal effect end --------------*/
+/* 
+
+
+
 /* Bigger Screen */
-@media (min-width: 800px) {
+/* @media (min-width: 800px) {
     .logo-text {
         font-size: 3rem;
         margin: 0 3rem;
@@ -202,4 +318,4 @@
         font-size: 1.5rem;
     }
 
-}
+} */
