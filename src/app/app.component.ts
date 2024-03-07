@@ -18,17 +18,8 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
   
 })
 export class AppComponent {
-
-  constructor(public translate: TranslateService){
-    translate.addLangs(["en", "da"]);
-    translate.setDefaultLang('en');
-
-  }
   title = 'sanjit-cv';
 
-  switchLang(lang: string) {
-    this.translate.use(lang);
-  }
 }
 
 export function HttpLoaderFactory(http: HttpClient) {

@@ -7,14 +7,17 @@
                     <h1 class="logo-text">SP</h1>
                 </a>
             </div>
-            <div class="nav-menu" data-aos="fade-left" data-aos-duration="2000">
-                <a href="#about">{{"ABOUT" | translate}}</a>
-                <a href="#portfolio">Portfolio</a>
-                <a href="#cv">CV</a>
-                <a href="#contact">Contact</a>
-                <button class="toggle-button" >
-                    <span></span>
-                </button>
+            <div class="nav-item" data-aos="fade-left" data-aos-duration="2000">
+                <div class="nav-menu">
+                    <a href="#about">{{"ABOUT" | translate}}</a>
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="#cv">CV</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <select class="language-select" (change)="switchLang($event)">
+                    <option value="en" class="lang">English</option>
+                    <option value="da" class="lang">Danish</option>
+                </select>
             </div>
         </div>
         <!--Nav End-->
