@@ -1,3 +1,9 @@
 {
-    "ABOUT": "About"
+    "ABOUT": "About",
+    "PORTFOLIO": "Portfolio",
+    "CV": "CV",
+    "CONTACT": "Contact",
+    "HI": "Hi",
+    "I_AM": "I'm",
+    "INTRO-DEV": "Student Software Developer"
 }
