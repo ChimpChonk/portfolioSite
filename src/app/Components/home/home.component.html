@@ -14,10 +14,13 @@
                     <a href="#cv">CV</a>
                     <a href="#contact">Contact</a>
                 </div>
-                <select class="language-select" (change)="switchLang($event)">
-                    <option value="en" class="lang">English</option>
-                    <option value="da" class="lang">Dansk</option>
-                </select>
+                <div class="dropdown">
+                    <button class="dropbtn">Language</button>
+                    <div class="dropdown-content">
+                        <a href="#" (click)="switchLang('en')">English</a>
+                        <a href="#" (click)="switchLang('da')">Danish</a>
+                    </div>
+                </div>
             </div>
         </div>
         <!--Nav End-->

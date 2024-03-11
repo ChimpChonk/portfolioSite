@@ -33,10 +33,7 @@ export class HomeComponent implements OnInit{
       translate.setDefaultLang('en');
     }
 
-    switchLang(event: Event) {
-      const target = event.target as HTMLSelectElement;
-      if (target) {
-        this.translate.use(target.value);
-      }
+    switchLang(lang: string) {
+        this.translate.use(lang);
     }
 }
