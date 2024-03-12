@@ -28,12 +28,21 @@ export class HomeComponent implements OnInit{
     ngOnInit() {
       AOS.init();
     }
+
+    cLang?: string;
+
     constructor(public translate: TranslateService){
       translate.addLangs(["en", "da"]);
       translate.setDefaultLang('en');
     }
+    isDropdownOpen: boolean = false;
 
+    dropdown(): void{
+      this.isDropdownOpen = !this.isDropdownOpen;
+
+    }
     switchLang(lang: string) {
         this.translate.use(lang);
+        this.cLang = lang;
     }
 }
