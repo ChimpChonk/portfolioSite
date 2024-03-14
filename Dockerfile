@@ -13,5 +13,5 @@ FROM nginx:alpine
 
 COPY --from=angular /app/docs/browser /usr/share/nginx/html
 
-EXPOSE 80
+EXPOSE 80 
 CMD ["nginx", "-g", "daemon off;"]
