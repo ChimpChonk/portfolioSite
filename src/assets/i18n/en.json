@@ -1,3 +1,20 @@
 {
-    "ABOUT": "About"
+    "ABOUT": "About",
+    "PORTFOLIO": "Portfolio",
+    "CV": "CV",
+    "CONTACT": "Contact",
+    "LANGUAGE": "English",
+    "HI": "Hi,",
+    "I_AM": "I'm",
+    "INTRO-DEV": "Student Software Developer",
+    "INTRO-DES": "Software / Fullstack web developer",
+    "CONTACT-ME": "Contact me",
+    "ABOUT-ME": "About me",    
+    "ABOUT-ME-TEXT-1": "Hello, I'm Sanjit, currently immersing myself in the world of software development as I pursue a Data Technician Specialization in Programming degree. My journey into technology traces back to my childhood, where I found joy in dissecting gadgets and exploring their inner workings. It was during the era of Windows XP that my fascination with technology truly blossomed, fueled by my love for classic video games like CS 1.6, Prince Of Persia, GTA, and Flash games in the browser.",
+    "ABOUT-ME-TEXT-2": "As I progress through my studies, I find myself drawn deeper into the realms of Desktop and Web Development. Each line of code I write feels like a piece of a puzzle, fitting together to create something extraordinary. I'm captivated by the intricate dance between creativity and logic that defines the world of software development.",
+    "ABOUT-ME-TEXT-3":"With each project and assignment, I strive to expand my knowledge and refine my skills, always pushing the boundaries of what's possible. My ultimate goal is to become a proficient software developer, equipped with the tools to turn ideas into reality and make a positive impact in the tech community.",
+    "DOWNLOAD": "Download My CV",
+    "CONTACT-ME-TEXT": "I'm interested in new opportunities especially ambitious or large projects. Whether you have a question or just want to say hi, I'll try my best to get back to you!",
+    "CONTACT-BTN-TEXT": "Say Hello!",
+    "FOOTER-TEXT": "Designed and built by Sanjit."
 }
