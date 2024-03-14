@@ -40,7 +40,7 @@ export class PortfolioComponent implements OnInit{
         { text: 'SQL', color: 'green' },
       ],
       title: 'Meal Planner',
-      description: 'Mealplanner is a web application that allows users to plan their meals for the week. Users can add, edit, and delete meals from their meal plan. The application also has a feature that generate a shopping list based on the meals they have planned',
+      description: 'Mealplanner is a web application that allows users to plan their meals for the week. Users can add, edit, and delete meals from their meal plan. The application also has a feature that generate a shopping list based on the meals they have planned.',
       link: 'https://github.com/ChimpChonk/P3AngularMealPlanner'
     },
     {
@@ -98,7 +98,7 @@ export class PortfolioComponent implements OnInit{
         { text: 'SQL', color: 'green' },
       ],
       title: 'Meal Planner',
-      description: 'Mealplanner er en webapplikation, der giver brugerne mulighed for at planlægge deres måltider for ugen. Brugere kan tilføje, redigere og slette måltider fra deres madplan. Applikationen har også en funktion, der genererer en indkøbsliste baseret på de måltider, de har planlagt.',
+      description: 'Mealplanner er en webapplikation, der giver brugerne mulighed for at planlægge deres mad for ugen. Brugerne kan tilføje, redigere og slette mad fra deres madplan. Applikationen har også en funktion, der genererer en indkøbsliste baseret på de mad, de har planlagt.',
       link: 'https://github.com/ChimpChonk/P3AngularMealPlanner'
     },
     {
@@ -111,8 +111,8 @@ export class PortfolioComponent implements OnInit{
         { text: 'JavaScript', color: '#f7df1e' },
         { text: 'SQL', color: 'green' },
       ],
-      title: 'Harvard CS50',
-      description: 'Jeg er midt i at gennemføre Harvard CS50-kurset. Dette kursus er en introduktion til datalogi og kunsten at programmere. Kurset undervises i C, men jeg har færdiggjort opgavesættene i C, JavaScript og Python. Jeg har lært meget om algoritmer, datastrukturer og webudvikling.',
+      title: 'Harvard CS50', 
+      description: 'Jeg er i gang med at gennemføre Harvard CS50-kurset. Dette kursus er en introduktion til datalogi og programmeringskunsten. Selvom kurset primært undervises i C, har jeg valgt at løse problemerne ved hjælp af C, JavaScript og Python. Igennem kurset har jeg opnået en dybdegående forståelse af algoritmer, datastrukturer og webudvikling.',
       link: 'https://github.com/ChimpChonk/CS50'
     },
     {
@@ -124,7 +124,7 @@ export class PortfolioComponent implements OnInit{
         { text: 'TypeScript', color: 'blue' },
       ],
       title: 'sanjit-dev.me',
-      description: 'Dette er min personlige hjemmeside. Jeg byggede denne hjemmeside ved hjælp af Angular. Jeg har brugt denne hjemmeside som en måde at fremvise mit arbejde og til at øve mine webudviklingsevner.',
+      description: 'Dette er min personlige hjemmeside, som jeg har bygget ved hjælp af Angular. Jeg har anvendt denne hjemmeside til at vise mit arbejde frem og til at øve mine webudviklingsevner.',
       link: 'https://github.com/ChimpChonk/portfolioSite'
     },
     {
@@ -138,7 +138,7 @@ export class PortfolioComponent implements OnInit{
         { text: 'SQL', color: 'green' },
       ],
       title: 'Andre projekter',
-      description: 'Jeg har mange andre projekter, som jeg har arbejdet på, mens jeg har lært programmering. Jeg har erfaring med C#, ASP.NET, Angular, HTML, CSS, TypeScript og SQL. Jeg har erfaring med webudvikling, desktop-applikationer og databasestyring. Jeg leder altid efter nye projekter at arbejde på og nye teknologier at lære.',
+      description: 'Jeg har mange andre projekter, som jeg har arbejdet på, mens jeg har lært at programmere. Jeg har erfaring med C#, ASP.NET, Angular, HTML, CSS, TypeScript og SQL. Min erfaring spænder over webudvikling, desktop-applikationer og databaseadministration. Jeg er altid på udkig efter nye projekter at arbejde på og nye teknologier at lære.',
       link: 'https://github.com/ChimpChonk?tab=repositories'
     }
   ];
