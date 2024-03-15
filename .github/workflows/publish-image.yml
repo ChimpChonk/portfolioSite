@@ -24,7 +24,7 @@ jobs:
         run: sleep 10
 
       - name: Copy files from Docker container
-        run: docker cp my-container:/usr/share/nginx/html /tmp/deploy
+        run: docker cp my-container:/usr/share/nginx/html/ /tmp/deploy
 
       - name: Prepare deployment directory
         run: mkdir -p $GITHUB_WORKSPACE/deploy && cp -r /tmp/deploy/. $GITHUB_WORKSPACE/deploy
