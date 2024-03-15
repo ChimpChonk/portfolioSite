@@ -15,22 +15,16 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Build Docker image
-        run: docker build -t portfolio-site .
+        run: docker build -t my-website .
 
-      - name: Run Docker container
-        run: docker run -d --name my-container portfolio-site
+      - name: Run Docker container with volume mount
+        run: docker run -d --name my-container -v ${{ github.workspace }}/deploy:/path/to/build/files my-website
 
-      - name: Wait for container to start
+      - name: Wait for container to finish building
         run: sleep 10
-
-      - name: Copy files from Docker container
-        run: docker cp my-container:/usr/share/nginx/html/ /tmp/deploy
-
-      - name: Prepare deployment directory
-        run: mkdir -p $GITHUB_WORKSPACE/deploy && cp -r /tmp/deploy/. $GITHUB_WORKSPACE/deploy
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.ACCESS_TOKEN }}
-          publish_dir: $GITHUB_WORKSPACE/deploy
+          publish_dir: deploy
