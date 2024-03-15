@@ -44,7 +44,7 @@ jobs:
       - name: Push changes to GitHub
         uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.ACCESS_TOKEN_2 }}
           branch: gh-pages
 
       - name: Cleanup
