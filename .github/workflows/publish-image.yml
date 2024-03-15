@@ -33,6 +33,4 @@ jobs:
         with:
           github_token: ${{ secrets.ACCESS_TOKEN }}
           publish_dir: deploy
-          
-      - name: Cleanup
-        run: docker stop my-container && docker rm my-container
+
