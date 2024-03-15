@@ -18,10 +18,16 @@ jobs:
         run: docker build -t portfolio-site .
 
       - name: docker Run
-        run: docker run -p 8080:80 portfolio-site
+        run: docker run portfolio-site
+
+      - name: Wait for container to start
+        run: sleep 10
+
+      - name: Copy files from Docker container
+        run: docker cp $(docker ps -lq):/path/to/files /github/workspace/deploy
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.ACCESS_TOKEN }}
-          publish_dir: ./docs
+          publish_dir: /github/workspace/deploy
