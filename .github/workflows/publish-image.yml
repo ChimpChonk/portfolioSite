@@ -3,8 +3,6 @@ name: Docker Image CI
 on:
   push:
     branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
 
 jobs:
 
@@ -16,19 +14,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '20.11.1'
+      - name: Build docker image
+        run: docker build -t portfolio-site .
 
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build Angular app
-        run: npm run build --output-path=/docs/ --base-href
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.ACCESS_TOKEN }}
-          publish_dir: ./docs
+      - name: docker Run
+        run: docker run -p 8080:80 portfolio-site
+        
