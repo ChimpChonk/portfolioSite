@@ -15,4 +15,12 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag portgoliosite:$(date +%s)
+      run: |
+        docker build -t my-angular-app .
+        docker run my-angular-app ng build --output-path=docs --base-href
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.ACCESS_TOKEN }}
+        publish_dir: ./docs
