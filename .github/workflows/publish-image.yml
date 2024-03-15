@@ -23,8 +23,16 @@ jobs:
       - name: Wait for container to finish building
         run: sleep 10
 
+      - name: Copy files to branch
+        run: |
+          mkdir -p deploy
+          docker cp my-container:/path/to/build/files/. deploy
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.ACCESS_TOKEN }}
           publish_dir: deploy
+          
+      - name: Cleanup
+        run: docker stop my-container && docker rm my-container
