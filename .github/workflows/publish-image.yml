@@ -17,14 +17,14 @@ jobs:
       - name: Build docker image
         run: docker build -t portfolio-site .
 
-      - name: docker Run
-        run: docker run portfolio-site
+      - name: Run Docker container
+        run: docker run -d --name my-container portfolio-site
 
       - name: Wait for container to start
         run: sleep 10
 
       - name: Copy files from Docker container
-        run: docker cp $(docker ps -lq):/path/to/files /github/workspace/deploy
+        run: docker cp my-container:/usr/share/nginx/html /github/workspace/deploy
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
