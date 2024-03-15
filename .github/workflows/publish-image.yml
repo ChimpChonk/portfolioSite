@@ -14,7 +14,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Build docker image
+      - name: Build Docker image
         run: docker build -t portfolio-site .
 
       - name: Run Docker container
@@ -24,7 +24,10 @@ jobs:
         run: sleep 10
 
       - name: Copy files from Docker container
-        run: docker cp my-container:/usr/share/nginx/html /github/workspace/deploy
+        run: docker cp my-container:/usr/share/nginx/html /tmp/deploy
+
+      - name: Prepare deployment directory
+        run: mkdir -p /github/workspace/deploy && cp -r /tmp/deploy/. /github/workspace/deploy
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
