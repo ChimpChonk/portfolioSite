@@ -18,19 +18,19 @@ jobs:
         run: docker build -t my-website .
 
       - name: Run Docker container with volume mount
-        run: docker run -d --name my-container -v ${{ github.workspace }}/deploy:/path/to/build/files my-website
+        run: docker run -d --name my-container -v ${{ github.workspace }}/gh-pages:/path/to/build/files my-website
 
       - name: Wait for container to finish building
         run: sleep 10
 
       - name: Copy files to branch
         run: |
-          mkdir -p deploy
-          docker cp my-container:/path/to/build/files/. deploy
+          mkdir -p gh-pages
+          docker cp my-container:/path/to/build/files/. gh-pages
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.ACCESS_TOKEN }}
-          publish_dir: deploy
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
 
