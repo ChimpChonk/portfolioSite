@@ -4,9 +4,9 @@ WORKDIR /app
 
 COPY . .
 
-RUN npm install
-
 RUN npm install -g @angular/cli
+
+RUN npm install
 
 RUN ng build --output-path=docs --base-href
 FROM nginx:alpine
