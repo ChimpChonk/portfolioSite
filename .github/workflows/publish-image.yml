@@ -28,7 +28,7 @@ jobs:
         run: npm run build -- --output-path=docs --base-href
 
       - name: Copy to Docs
-        run: cp -r /browser docs/
+        run: cp -r browser/ docs/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
