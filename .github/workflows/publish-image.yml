@@ -27,10 +27,10 @@ jobs:
         run: docker cp my-container:/usr/share/nginx/html /tmp/deploy
 
       - name: Prepare deployment directory
-        run: mkdir -p /github/workspace/deploy && cp -r /tmp/deploy/. /github/workspace/deploy
+        run: mkdir -p $GITHUB_WORKSPACE/deploy && cp -r /tmp/deploy/. $GITHUB_WORKSPACE/deploy
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.ACCESS_TOKEN }}
-          publish_dir: /github/workspace/deploy
+          publish_dir: $GITHUB_WORKSPACE/deploy
