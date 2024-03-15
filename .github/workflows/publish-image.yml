@@ -5,11 +5,8 @@ on:
     branches: [ "master" ]
 
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -18,19 +15,37 @@ jobs:
         run: docker build -t my-website .
 
       - name: Run Docker container with volume mount
-        run: docker run -d --name my-container -v ${{ github.workspace }}/gh-pages:/path/to/build/files my-website
+        run: docker run -d --name my-container -v ${{ github.workspace }}/deploy:/path/to/build/files my-website
 
       - name: Wait for container to finish building
         run: sleep 10
 
       - name: Copy files to branch
         run: |
-          mkdir -p gh-pages
-          docker cp my-container:/path/to/build/files/. gh-pages
+          mkdir -p deploy
+          docker cp my-container:/path/to/build/files/. deploy
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Set up Git
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
+
+      - name: Initialize git repository
+        run: |
+          git init
+          git status
+          git checkout -b gh-pages
+          git status
+          git add deploy
+          git status
+          git commit -m "Deploy to GitHub Pages"
+          git status
+
+      - name: Push changes to GitHub
+        uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages
+          branch: gh-pages
 
+      - name: Cleanup
+        run: docker stop my-container && docker rm my-container
