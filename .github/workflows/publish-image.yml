@@ -25,10 +25,7 @@ jobs:
         run: npm install
 
       - name: Build Angular app
-        run: npm run build -- --output-path=docs --base-href
-
-      - name: Copy to Docs
-        run: cp -r browser/ docs/
+        run: npm run build --output-path=docs --base-href
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
