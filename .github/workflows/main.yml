@@ -1,26 +1,26 @@
-name: Deploy Dockerfile artifacts to GitHub Pages
+name: Deploy Angular App to GitHub Pages
 
 on:
   push:
     branches:
-      - master  # Change this to your main branch
+      - main
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v2
+    - name: Checkout code
+      uses: actions/checkout@v3
 
-    - name: Build Docker Image
-      run: docker build -t my-angular-image .
+    - name: Build Docker image
+      run: docker build -t my-angular-app .
 
-    - name: Run Docker Container and Build Site
-      run: docker run --rm -v $(pwd):/app my-angular-image sh -c "npm install && npm run build"
+    - name: Run Docker container to build Angular app
+      run: docker run --rm -v ${{ github.workspace }}:/app my-angular-app npm install && npm run build -- --prod
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.ACCESS_TOKEN }}
-        publish_dir: ./docs 
+        publish_dir: /app/dist/portfolioSite  # Adjust the path based on your Angular app's build output
