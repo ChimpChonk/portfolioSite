@@ -25,15 +25,10 @@ jobs:
         run: npm install
 
       - name: Build Angular app
-        run: npm run build -- --output-path=docs --base-href=./
-
-      - name: Copy to docs
-        run: |
-          mkdir -p docs
-          cp -r browser/* docs/
+        run: npm run build --output-path=docs --base-href=./
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.ACCESS_TOKEN }}
-          publish_dir: ./docs
+          publish_dir: ./docs/browser
