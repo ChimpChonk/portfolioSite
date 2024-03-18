@@ -8,7 +8,7 @@ RUN npm install -g @angular/cli
 
 RUN npm install
 
-RUN npm run build -- --output-path=docs --base-href
+RUN npm run build -- --output-path=docs --base-href=/portfolioSite/
 
 FROM nginx:alpine
 
