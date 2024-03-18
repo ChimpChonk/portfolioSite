@@ -1,12 +1,12 @@
-FROM node:21-alpine3.18 as angular
+FROM node:latest as angular
 
 WORKDIR /app
 
-COPY . .
-
-RUN npm install -g @angular/cli
+COPY . /app
 
 RUN npm install
+
+RUN npm install -g @angular/cli
 
 RUN npm run build -- --output-path=docs --base-href=/portfolioSite/
 
