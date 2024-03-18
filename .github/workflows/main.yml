@@ -1,4 +1,4 @@
-name: Docker Image CI
+name: Build and Deploy
 
 on:
   push:
@@ -31,4 +31,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.ACCESS_TOKEN }}
-          publish_dir: ./docs
+          publish_dir: ./
