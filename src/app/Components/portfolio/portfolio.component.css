@@ -1,0 +1,45 @@
+* {
+    color: #fff;
+}
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+}
+
+.content {
+    text-align: center;
+}
+
+.title h1 {
+    margin: 1.5rem;
+    color: #FFC107;
+    font-size: 3rem;
+    padding: 1rem;
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
+}
+
+.cards {
+    height: 600px;
+    margin: 1rem 0;
+} 
+.portfolio-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0.5rem;
+    width: 80vw;
+    height: auto;
+}
+
+@media(max-width: 800px){
+    .title h1 {
+        margin: 1rem;
+        font-size: 2rem;
+    }
+}
