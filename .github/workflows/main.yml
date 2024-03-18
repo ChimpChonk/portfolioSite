@@ -17,8 +17,8 @@ jobs:
       run: docker build -t my-angular-app .
 
     - name: Run Docker container to build Angular app
-      run: docker run --rm -v ${{ github.workspace }}:/app my-angular-app npm install && npm run build -- --prod
-
+      run: docker run --rm -v ${{ github.workspace }}:/app my-angular-app
+      
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
