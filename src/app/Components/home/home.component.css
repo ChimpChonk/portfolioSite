@@ -149,6 +149,7 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .nav-bar {
@@ -189,9 +190,6 @@
     margin: 0 2rem;
 }
 
-
-
-
 .dropbtn {
     font-size: 1rem;
     font-weight: bold;
@@ -200,7 +198,6 @@
     color: #FFC107;
     padding: 10px;
     cursor: pointer;
-    /* text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7); */
 }
 
 .dropbtn:hover {
@@ -232,10 +229,6 @@
     background-color: #FFC107;
     color: #222;
 }
-
-
-
-
 
 @media(max-width: 800px) {
 
