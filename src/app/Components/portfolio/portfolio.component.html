@@ -4,14 +4,14 @@
             <h1>{{"PORTFOLIO" | translate}}</h1>
         </div>
         <div class="portfolio-content">
-            <div *ngIf="currentLang === 'en'">
-                <div *ngFor="let card of cardData" class = "cards" data-aos="fade-right">
+            <div *ngIf="currentLang === 'en'" class="port-card-container">
+                <div *ngFor="let card of cardData" class="cards" data-aos="fade-right">
                     <app-card [cardData]="card">
                     </app-card>
                 </div>
             </div>
-            <div *ngIf="currentLang === 'da'">
-                <div *ngFor="let card of cardDataDa" class = "cards" data-aos="fade-right">
+            <div *ngIf="currentLang === 'da'" class="port-card-container">
+                <div *ngFor="let card of cardDataDa" class="cards" data-aos="fade-right">
                     <app-card [cardData]="card">
                     </app-card>
                 </div>
