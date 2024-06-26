@@ -27,17 +27,14 @@
     margin: 1rem 0;
 } 
 .portfolio-content {
-    padding: 0.5rem;
-    width: 100%;
-    height: auto;
-}
-
-.port-card-container {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0.5rem;
+    width: 80vw;
+    height: auto;
 }
 
 @media(max-width: 800px){

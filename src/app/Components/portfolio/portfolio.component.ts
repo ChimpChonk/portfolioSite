@@ -28,9 +28,6 @@ export class PortfolioComponent implements OnInit{
 
 
   cardData: CardData[] = [
-    // {
-    //   imageSource
-    // },
     {
       imageSource: 'assets/mealPlanner/mealplanner_logo.PNG',
       tags: [
