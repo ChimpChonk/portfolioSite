@@ -30,7 +30,7 @@
 .portfolio-content {
     padding: 0.5rem;
     width: 100%;
-    height: auto;
+    min-height: 800px;
 }
 
 .port-card-container {
